@@ -59,9 +59,6 @@ int main(int argc, char *argv[])
 		{
 			FD_SET(tmp->fd, &readfds);
 			fd_max = tmp->fd>fd_max? tmp->fd: fd_max;
-			printf(" [%s:%d] %d\n", 
-				inet_ntoa(tmp->clinet.sin_addr),
-				ntohs(tmp->clinet.sin_port), tmp->type);
 		}
 #ifdef DEBUG
 		printf("%d\n", __LINE__);
